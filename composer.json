@@ -12,6 +12,9 @@
     "bin": [
 	    "bin/brain-games"
     ],
+    "scripts": {
+        "phpcs": "phpcs"
+    },
     "autoload": {
 	    "files": [
 		    "src/Cli.php"
@@ -19,5 +22,8 @@
     },
     "require": {
         "wp-cli/php-cli-tools": "dev-master"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "4.0.x-dev"
     }
 }
