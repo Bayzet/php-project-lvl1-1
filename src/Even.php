@@ -10,12 +10,12 @@ function even($number, $userAnswer) // function to determine the parity
     if ($number % 2 === 0 && $userAnswer === 'yes') {
         return 'Correct!';
     } elseif ($number % 2 === 0 && $userAnswer === 'no') {
-        return ''no' is wrong answer ;(. Correct answer was 'yes'';
+        return "'no' is wrong answer ;(. Correct answer was 'yes'";
     } elseif ($number % 2 !== 0 && $userAnswer === 'yes') {
-        return ''yes' is wrong answer ;(. Correct answer was 'no'';
+        return "'yes' is wrong answer ;(. Correct answer was 'no'";
     } elseif ($number % 2 !== 0 && $userAnswer === 'no') {
         return 'Correct!';
-    } elseif ($userAnswer !== 'no' && $userAnswer !== 'yes') {
+    } else {
         return 'Your answer is wrong';
     }
 }
@@ -30,11 +30,13 @@ function evenGame()
     while ($count < 3) {
         $number = rand();
         line("Question: $number");
-        $userAnswer = prompt('Your answer: ');
+        $userAnswer = prompt('Your answer');
         line("%s", even($number, $userAnswer));
         if (even($number, $userAnswer) === 'Correct!') {
             $count += 1;
+        } else {
+            $count = 0;
         }
     }
-    return "Congratulations, {$name}";
+    return print_r("Congratulations, {$name}\n");
 }
