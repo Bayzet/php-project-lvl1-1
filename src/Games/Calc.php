@@ -23,7 +23,7 @@ function calculation()
     return print_r("Congratulations, {$name}!\n");
 }
 
-function amount($name)// Function is realizing summ numbers 
+function amount($name)// Function is realizing summ numbers
 {
     $count = 0;
     while ($count < 3) {
