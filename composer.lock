@@ -4,26 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1250a86abab2b6aece1ac072b0f82737",
+    "content-hash": "13723dc35e9e49626afec98a275d6ce7",
     "packages": [
         {
             "name": "wp-cli/php-cli-tools",
-            "version": "dev-master",
+            "version": "v0.11.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/php-cli-tools.git",
-                "reference": "27f2a3b898ef14c0469d675973bf8187e9eb47f0"
+                "reference": "fe9c7c44a9e1bf2196ec51dc38da0593dbf2993f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/27f2a3b898ef14c0469d675973bf8187e9eb47f0",
-                "reference": "27f2a3b898ef14c0469d675973bf8187e9eb47f0",
+                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/fe9c7c44a9e1bf2196ec51dc38da0593dbf2993f",
+                "reference": "fe9c7c44a9e1bf2196ec51dc38da0593dbf2993f",
                 "shasum": ""
             },
             "require": {
                 "php": ">= 5.3.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -39,14 +38,14 @@
             ],
             "authors": [
                 {
-                    "name": "Daniel Bachhuber",
-                    "email": "daniel@handbuilt.co",
-                    "role": "Maintainer"
-                },
-                {
                     "name": "James Logsdon",
                     "email": "jlogsdon@php.net",
                     "role": "Developer"
+                },
+                {
+                    "name": "Daniel Bachhuber",
+                    "email": "daniel@handbuilt.co",
+                    "role": "Maintainer"
                 }
             ],
             "description": "Console utilities for PHP",
@@ -59,7 +58,7 @@
                 "issues": "https://github.com/wp-cli/php-cli-tools/issues",
                 "source": "https://github.com/wp-cli/php-cli-tools/tree/master"
             },
-            "time": "2020-07-08T00:22:11+00:00"
+            "time": "2018-09-04T13:28:00+00:00"
         }
     ],
     "packages-dev": [
@@ -69,12 +68,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "5ac0ed679d28c717a5e919535dce7212f86a5d0f"
+                "reference": "183a38112f3d71b320116dad18b2a84fd51a9154"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5ac0ed679d28c717a5e919535dce7212f86a5d0f",
-                "reference": "5ac0ed679d28c717a5e919535dce7212f86a5d0f",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/183a38112f3d71b320116dad18b2a84fd51a9154",
+                "reference": "183a38112f3d71b320116dad18b2a84fd51a9154",
                 "shasum": ""
             },
             "require": {
@@ -117,13 +116,12 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2021-01-14T04:42:04+00:00"
+            "time": "2021-01-19T02:21:51+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "wp-cli/php-cli-tools": 20,
         "squizlabs/php_codesniffer": 20
     },
     "prefer-stable": false,
