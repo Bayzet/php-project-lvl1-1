@@ -4,49 +4,42 @@ namespace Brain\Progression;
 
 use function cli\line;
 use function cli\prompt;
+use function Brain\Games\Engine\engineStart;
 
 function progression()
 {
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
-    line('What number is missing in the progression?');
-    if (progress($name)) {
-        return print_r("Congratulations, $name!\n");
-    } else {
-        return print_r("You lost the game, $name!\n");
-    }
+    return engineStart("Progression");
 }
 
-function progress($name)
+function question($num1, $num2)
 {
-    $count = 0;
-    $countWrong = 0;
-    while ($count < 3 && $countWrong < 3) {
-        $a = rand(0, 100);
-        $k = rand(0, 10);
-        $j = rand(0, 8);
-        $list = [];
-        for ($i = 0, $element = $a; $i < 10; $i++) {
-            $list[] = $element;
-            $element += $k;
-        }
-        $rightAnswer = $list[$j];
-        $list[$j] = '..';
-        $list = implode(' ', $list);
-        line("Question: {$list}");
-        $userAnswer = (int) prompt('Your answer');
-        if ($userAnswer === $rightAnswer) {
-            $count += 1;
-            echo "Correct!\n";
-        } else {
-            $countWrong += 1;
-            echo "{$userAnswer} is wrong answer ;(. Correct answer was {$rightAnswer}\nLet's try again, $name!\n";
-        }
+    $list = createProgression($num1, $num2);
+    $list = implode(' ', $list);
+    return "Question: {$list}";
+}
+
+function createProgression($num1, $num2, $removableNumber = 3)
+{
+    $firstNumber = $num1;
+    $progressionStep = $num2;
+    $list = [];
+    for ($i = 0, $element = $firstNumber; $i < 10; $i++) {
+        $list[] = $element;
+        $element += $progressionStep;
     }
-    if ($count === 3) {
-        return true;
-    } else {
-        return false;
+    $list[$removableNumber] = '..';
+    return $list;
+}
+
+function calculation($num1, $num2, $removableNumber = 3)
+{
+    $firstNumber = $num1;
+    $progressionStep = $num2;
+    $list = [];
+    for ($i = 0, $element = $firstNumber; $i < 10; $i++) {
+        $list[] = $element;
+        $element += $progressionStep;
     }
+    $rightAnswer = $list[$removableNumber];
+    return $rightAnswer;
 }

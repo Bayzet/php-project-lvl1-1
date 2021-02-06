@@ -4,39 +4,19 @@ namespace Brain\Even;
 
 use function cli\line;
 use function cli\prompt;
+use function Brain\Games\Engine\engineStart;
 
-function even($number, $userAnswer) // function to determine the parity
+function calculation($num1, $num2)
 {
-    if ($number % 2 === 0 && $userAnswer === 'yes') {
-        return 'Correct!';
-    } elseif ($number % 2 === 0 && $userAnswer === 'no') {
-        return "'no' is wrong answer ;(. Correct answer was 'yes'";
-    } elseif ($number % 2 !== 0 && $userAnswer === 'yes') {
-        return "'yes' is wrong answer ;(. Correct answer was 'no'";
-    } elseif ($number % 2 !== 0 && $userAnswer === 'no') {
-        return 'Correct!';
-    } else {
-        return 'Your answer is wrong';
-    }
+    return ($num1 % 2 === 0) ? "yes" : "no";
+}
+
+function question($num1, $num2)
+{
+    return "Question: $num1";
 }
 
 function evenGame()
 {
-    line('Welcome to the Brain Game!');
-    $name = prompt('May I have your name');
-    line("Hello, %s!", $name);
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-    $count = 0;
-    while ($count < 3) {
-        $number = rand();
-        line("Question: $number");
-        $userAnswer = prompt('Your answer');
-        line("%s", even($number, $userAnswer));
-        if (even($number, $userAnswer) === 'Correct!') {
-            $count += 1;
-        } else {
-            $count = 0;
-        }
-    }
-    return print_r("Congratulations, {$name}\n");
+    return engineStart("Even");
 }
