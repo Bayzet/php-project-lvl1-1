@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\engineStart;
 
-function calc(): callable
+function calc()
 {
     $questionVariable = function ($num1, $num2): string {
         $random = rand(0, 2);

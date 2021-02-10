@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\engineStart;
 
-function gcd(): callable
+function gcd()
 {
     $question = function ($num1, $num2): string {
         return "Question: {$num1} {$num2}";

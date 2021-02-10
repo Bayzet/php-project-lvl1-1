@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\engineStart;
 
-function easyNumber(): callable
+function easyNumber()
 {
     $question = function ($num1, $num2): string {
         return "Question: {$num1}";

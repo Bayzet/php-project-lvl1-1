@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\engineStart;
 
-function progression(): callable
+function progression()
 {
     $question = function ($num1, $num2): string {
         $list = createProgression($num1, $num2);
