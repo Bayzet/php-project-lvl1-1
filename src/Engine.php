@@ -7,7 +7,7 @@ use function cli\prompt;
 
 define("GAME_COUNT", 3);
 
-function engineStart(string $game, callable $questionVariable, callable $calculation, callable $operator = null): string
+function engineStart(string $game, callable $questionVariable, callable $calculation, callable $operator = null): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
