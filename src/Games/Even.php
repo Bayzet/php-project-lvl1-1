@@ -6,12 +6,12 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\engineStart;
 
-function evenGame()
+function evenGame(): callable
 {
-    $question = function ($num1, $num2) {
+    $question = function ($num1, $num2): string {
         return "Question: $num1";
     };
-    $calculation = function ($num1, $num2, $operator) {
+    $calculation = function ($num1, $num2, $operator): string {
         return ($num1 % 2 === 0) ? "yes" : "no";
     };
     define("GAME_NAME", 'Answer "yes" if the number is even, otherwise answer "no".');

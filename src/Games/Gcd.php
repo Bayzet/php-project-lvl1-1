@@ -6,12 +6,12 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\engineStart;
 
-function gcd()
+function gcd(): callable
 {
-    $question = function ($num1, $num2) {
+    $question = function ($num1, $num2): string {
         return "Question: {$num1} {$num2}";
     };
-    $calculation = function ($first, $second, $operator) {
+    $calculation = function ($first, $second, $operator): int {
         while ($second != 0) {
             $temp = $first % $second;
             $first = $second;

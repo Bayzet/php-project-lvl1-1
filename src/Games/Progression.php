@@ -6,14 +6,14 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\engineStart;
 
-function progression()
+function progression(): callable
 {
-    $question = function ($num1, $num2) {
+    $question = function ($num1, $num2): string {
         $list = createProgression($num1, $num2);
         $list = implode(' ', $list);
         return "Question: {$list}";
     };
-    $calculation = function ($num1, $num2, $operator, $removableNumber = 3) {
+    $calculation = function ($num1, $num2, $operator, $removableNumber = 3): int {
         $firstNumber = $num1;
         $progressionStep = $num2;
         $list = [];
@@ -28,7 +28,7 @@ function progression()
     return engineStart(GAME_NAME, $question, $calculation);
 }
 
-function createProgression($num1, $num2, $removableNumber = 3)
+function createProgression(int $num1, int $num2, int $removableNumber = 3): array
 {
     $firstNumber = $num1;
     $progressionStep = $num2;

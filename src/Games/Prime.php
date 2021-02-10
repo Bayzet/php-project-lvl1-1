@@ -6,12 +6,12 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Engine\engineStart;
 
-function easyNumber()
+function easyNumber(): callable
 {
-    $question = function ($num1, $num2) {
+    $question = function ($num1, $num2): string {
         return "Question: {$num1}";
     };
-    $calculation = function ($num1, $num2, $operator) {
+    $calculation = function ($num1, $num2, $operator): string {
         $countDeviders = 0;
         if ($num1 === 0) {
             return 'no';

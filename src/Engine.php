@@ -7,12 +7,12 @@ use function cli\prompt;
 
 define("GAME_COUNT", 3);
 
-function engineStart($gameName, $questionVariable, $calculation, $operator = null)
+function engineStart(string $game, callable $questionVariable, callable $calculation, callable $operator = null): string
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line($gameName);
+    line($game);
     for ($i = 1; $i <= GAME_COUNT; $i++) {
         $num1 = rand(0, 100);
         $num2 = rand(0, 100);
