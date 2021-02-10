@@ -13,6 +13,9 @@ function easyNumber()
     };
     $calculation = function ($num1, $num2, $operator) {
         $countDeviders = 0;
+        if ($num1 === 0) {
+            return 'no';
+        }
         for ($i = 2, $length = $num1 / 2; $i <= $length; $i++) {
             if ($num1 % $i === 0) {
                 $countDeviders += 1;
