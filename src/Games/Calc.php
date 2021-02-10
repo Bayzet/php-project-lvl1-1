@@ -11,12 +11,12 @@ function calc()
     $questionVariable = function ($num1, $num2) {
         $random = rand(0, 2);
         switch ($random) {
-        case 0:// amount
-            return "Question: {$num1} + {$num2}";
-        case 1:// subtractio
-            return "Question: {$num1} - {$num2}";
-        case 2:// multiple
-            return "Question: {$num1} * {$num2}";
+            case 0:// amount
+                return "Question: {$num1} + {$num2}";
+            case 1:// subtractio
+                return "Question: {$num1} - {$num2}";
+            case 2:// multiple
+                return "Question: {$num1} * {$num2}";
         }
     };
     $calculation = function ($numb1, $numb2, $operator) {

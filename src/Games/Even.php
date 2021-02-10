@@ -8,8 +8,7 @@ use function Brain\Games\Engine\engineStart;
 
 function evenGame()
 {
-    $question = function ($num1, $num2)
-    {
+    $question = function ($num1, $num2) {
         return "Question: $num1";
     };
     $calculation = function ($num1, $num2, $operator) {

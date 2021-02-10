@@ -5,7 +5,7 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-define ("GAME_COUNT", 3);
+define("GAME_COUNT", 3);
 
 function engineStart($gameName, $questionVariable, $calculation, $operator = null)
 {
